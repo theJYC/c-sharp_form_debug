@@ -1,3 +1,8 @@
+/* solution 2:
+initialising constant variable to store the hardcoded email address (line 23)
+then passing in the reference to the variable into function invocation (line 40)
+*/
+
 /*
 This method is used to send email within the organization
 */
@@ -15,6 +20,7 @@ protected void btnSubmit_Click(object sender, EventArgs e)
 {
     string msgBody = string.Empty;
     string subject = string.Empty;
+    string PUBLIC_ASSISTANT_MANAGER_EMAIL = "pamanager@buncombecounty.org"
 
     //build the email
     msgBody = "<h1>Contact Public Assistance</h1><p>This email was received from a user of the Buncombe County Website.</p>"
@@ -31,7 +37,7 @@ protected void btnSubmit_Click(object sender, EventArgs e)
 
     //email Public Assistance Manager
     subject = "Web Contact: Public Assistance Question";
-    SendEmail(ConfigurationManager.AppSettings["emailNoReply"], subject,
+    SendEmail(ConfigurationManager.AppSettings["emailNoReply"], PUBLIC_ASSISTANT_MANAGER_EMAIL, subject,
     "<p><strong>There are new comments from a https://www.buncombecounty.org/publicassistanceuser.</strong></p>"
     + msgBody);
 

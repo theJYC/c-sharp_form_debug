@@ -1,3 +1,9 @@
+/* suggestion
+modify emailNoReply in AppSettings.json with another designated email address
+(e.g. pamanager@buncombecounty.org)
+and concatenate in msgBody that users can explicitly reply to this email address for further inquiries (line 37)
+*/
+
 /*
 This method is used to send email within the organization
 */
@@ -27,7 +33,8 @@ protected void btnSubmit_Click(object sender, EventArgs e)
 
         + "<dt>Questions  / Comments:</dt>"
         + "<dd>" + txtQuestions.Text.Replace(Environment.NewLine, "<br />") + "</dd>"
-    + "</d1>";
+    + "</d1>"
+    + "<p>Please reply to this email directly should you have further inquiries</p>";
 
     //email Public Assistance Manager
     subject = "Web Contact: Public Assistance Question";

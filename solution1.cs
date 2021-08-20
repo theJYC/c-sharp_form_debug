@@ -1,3 +1,7 @@
+/* solution 1:
+passing in hardcoded email address as an argument within function invocation (line 38)
+*/
+
 /*
 This method is used to send email within the organization
 */
@@ -31,7 +35,7 @@ protected void btnSubmit_Click(object sender, EventArgs e)
 
     //email Public Assistance Manager
     subject = "Web Contact: Public Assistance Question";
-    SendEmail(ConfigurationManager.AppSettings["emailNoReply"], subject,
+    SendEmail(ConfigurationManager.AppSettings["emailNoReply"], "pamanager@buncombecounty.org", subject,
     "<p><strong>There are new comments from a https://www.buncombecounty.org/publicassistanceuser.</strong></p>"
     + msgBody);
 

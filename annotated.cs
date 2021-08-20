@@ -1,6 +1,6 @@
 /* [0]
-Here, a public function with the label <SendEmail> is defined, with no expected return value.
-The function is defined with four parameters: emailFrom, emailTo, subject, and msgBody.
+Here, a public function is defined with the label <SendEmail>.
+And it's defined with four parameters: emailFrom, emailTo, subject, and msgBody.
 All of the parameters are of the string data type.
 */
 
@@ -26,8 +26,7 @@ protected void btnSubmit_Click(object sender, EventArgs e) {
 
     /* [2]
     the msgBody variable is populated through a series of string concatenation, with manually typed HTML elements
-    and with the values derived from the txtName, txtEmail, and txtQuestions objects.
-    Specifically, each of the three objects has a <Text> attribute which is referenced for the building of the email.
+    and values derived from the txtName, txtEmail, and txtQuestions objects.
     */
 
     //build the email
@@ -44,8 +43,9 @@ protected void btnSubmit_Click(object sender, EventArgs e) {
     + "</d1>";
 
     /* [3]
-    With the email <msgBody> built above, the below code conditionally assigns the subject variable according to the recipient,
-    Then, the <SendEmail> method is invoked with the four arguments that are the specified parameters in comment block [0].
+    With the email <msgBody> built above, the below code conditionally assigns the subject variable
+    according to the email recipient,
+    Then, you can see that the sendemail method is     the <SendEmail> method is invoked with the four arguments that are the specified parameters in comment block [0].
     */
 
     //email Public Assistance Manager
@@ -83,15 +83,35 @@ protected void btnSubmit_Click(object sender, EventArgs e) {
     + msgBody);
 }
 
+/*Introduction
+Line-by-line code-analysis (where we can derive a hypothesis on how to solve the problem)
+Presentation of solutions
+Additional discussion
 
+Introduction
+
+- Getting familiar with the unknown:
+    - Learning the fundamentals of C# and the .NET ecosystem
+    - Relating newfound knowledge with existing understanding
+        - C# is C-like in syntax, it is strongly-typed, and is a compiled language (vs. JavaScript)
+        - C# is a multi-paradigm programming language, and often times you see C# code written in Object Oriented design through the naming conventions of namespaces, classes, methods, etc.
+
+Line-by-line code-analysis
+
+-
 
 /*
 
 Should a noreply email be used here?
-More and more companies are saying that noreply emails are bad practice--
+Often times, noreply email is considered bad practice, and there are mainly two reasons:
+1) UX is affected - users have a hard time reaching you (think of accessible design)
+2) noreply can be caughted by email providers and flagged as spam
+
+Suggestion:
 If the Public Assistance Manager is happy with the idea, it might be best to actually just pass in the
 "pamanager@buncombecounty.org" as the corresponding argument to the emailFrom parameter,
-and also specify at the end of the built email msgBody that email replies can be received
+
+Then also specify at the end of the built email msgBody that email replies can be received
 and will be directed to Public Assistance Manager.
 
 
@@ -106,3 +126,39 @@ https://www.codeproject.com/Questions/1117800/What-does-object-sender-eventargs-
 Should you
 
 */
+
+
+
+Go into more detail as to why the first two hacks are not a good idea (hardcoding email addresses) -
+Talk less about the line-by-line analysis
+How this code snippet exists within a class (e.g. component which allows you to send email),
+what is the responsibility of the class,
+Talking about the higher-level concepts (i.e. strongly typed)
+Show how you think about code abstractly
+
+Talking a bit about C#
+Comparison to existing knowledge
+
+Go into more detail into why you don't want to hardcode email (esp. if they're subject to change)
+
+Conventions within the language (the object sender, EventArgs)
+
+Maybe the admin of the app can directly update the app setting
+
+
+
+
+//
+
+What the bug could be
+
+Can you validate your theory
+As I was looking at the network tab,
+I'd need to actually die into the code in the server to
+If there is not an active error
+
+How would you test this to solve it:
+Now just diagnosing the problem (i.e. coming u pwith hypothesis)
+
+
+Do you have any testing environment? Look up ASP.NET tests

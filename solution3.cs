@@ -1,8 +1,13 @@
+/* solution 3:
+specifying an optional parameter in function definition, with default value of new email address (line 10)
+hence also reordering the arguments of function invocation (lines 45 - 47) to prevent compile-time error
+*/
+
 /*
 This method is used to send email within the organization
 */
 
-public static void SendEmail(string emailFrom, string emailTo, string subject, string msgBody)
+public static void SendEmail(string emailFrom, string subject, string msgBody, string emailTo = "pamanager@buncombecounty.org")
 {
     //... some_code_here ...
 }
@@ -37,7 +42,7 @@ protected void btnSubmit_Click(object sender, EventArgs e)
 
     //email the user
     subject = "Buncombe County: Public Assistance Question";
-    SendEmail(ConfigurationManager.AppSettings["emailNoReply"], txtEmail.Text, subject,
+    SendEmail(ConfigurationManager.AppSettings["emailNoReply"], subject,
     "<p>Your question/comment has been received and we will reply as soon as possible.</p>"
-    + msgBody);
+    + msgBody, txtEmail.Text);
 }

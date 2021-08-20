@@ -1,3 +1,9 @@
+/* solution 4 (optimal)
+configuring the AppSettings.json file in the build file to add a new key-value pair,
+"emailPAM" : "pamanager@buncombecounty.org",
+and referencing it witin function invocation. (line 40)
+*/
+
 /*
 This method is used to send email within the organization
 */
@@ -31,8 +37,8 @@ protected void btnSubmit_Click(object sender, EventArgs e)
 
     //email Public Assistance Manager
     subject = "Web Contact: Public Assistance Question";
-    SendEmail(ConfigurationManager.AppSettings["emailNoReply"], subject,
-    "<p><strong>There are new comments from a https://www.buncombecounty.org/publicassistanceuser.</strong></p>"
+    SendEmail(ConfigurationManager.AppSettings["emailNoReply"], ConfigurationManager.AppSetings["emailPAM"],
+    subject,"<p><strong>There are new comments from a https://www.buncombecounty.org/publicassistanceuser.</strong></p>"
     + msgBody);
 
     //email the user
