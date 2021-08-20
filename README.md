@@ -30,4 +30,3 @@ root
 - `solutions`: Directory that holds the four possible solutions to fix the problem. At the top of each file is a brief summary of the solution, with its advantage and disadvantages outlined. 
     - N.B. `solution4.cs` is my optimal solution, and each solution build on the previous one.
 - `suggestion.cs`: A bonus piece to illustrate a potential area of improvement in the code, in order to improve UX. 
-- `/root/README.md`: Documentation that holds the directory map and the detailed index of the children files and subdirectory.
