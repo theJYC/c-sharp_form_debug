@@ -1,6 +1,6 @@
 # C# Web Form Debugging
 
-This repository demonstrates a problem that I came across while debugging a web application written in C#. 
+This repository illustrates a problem-solving process concerning an interactive web form that, upon submit, sends a couple of system-generated emails from noreply@buncombecounty.org to the end user and the webmaster. 
 
 
 ## Directory Map
@@ -8,7 +8,7 @@ This repository demonstrates a problem that I came across while debugging a web 
 The repository is organised as the below tree structure:
 
 ```
-project
+root
 │   README.md
 │   original.cs
 │   annotated.cs    
@@ -29,7 +29,5 @@ project
 - `annotated.cs`: Line-by-line analysis of `original.cs`, illustrated by multi-line comments to demonstrate the problem-solving process
 - `solutions`: directory that holds the four possible solutions to fix the problem. N.B. `solution4.cs` is my optimal solution.
 - `suggestion.cs`: A bonus piece to illustrate a potential area of improvement in the code, in order to improve UX. 
-
-## Introduction
-
-When I 
+- `/root/README.md`: Markdown file that holds site map, index, background into the problem
+- `/root/solutions/README.md`: Markdown file that holds the summary of pro's and con's of each solution present in the directory, with further elaboration of the suggestion presented in `suggestions.cs`
