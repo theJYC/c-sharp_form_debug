@@ -9,19 +9,19 @@ public static void SendEmail(string emailFrom, string emailTo, string subject, s
 }
 
 /* [1]
-Here, in line 17, the <btnSubmit_Click> method is defined and is to be only accessible within its parent scope.
+Here, in line 18, the <btnSubmit_Click> method is defined and is to be only accessible within its parent scope.
 With the specified (object sender, EventArgs e) parameters, this method is an event handler.
 As its semantic label suggests, this method will fire upon the click of the form submit button.
 N.B. The parent scope is likely a class that holds methods and data that is related to <btnSubmit_Click>)
 */
 
 protected void btnSubmit_Click(object sender, EventArgs e) {
-    //in lines 16-17 initialising msgBody and subject as empty string variables (to be populated below)
+    //In lines 20-21 initialising msgBody and subject as empty string variables (to be populated below)
     string msgBody = string.Empty;
     string subject = string.Empty;
 
     /* [2]
-    the msgBody variable is populated through a series of string concatenation, with manually typed HTML elements
+    In lines 30-40, the msgBody variable is populated through a series of string concatenation, with manually typed HTML elements
     and values derived with referenced key of Text for each of the txtName, txtEmail, and txtQuestions objects.
     N.B. email templates are typically written in HTML.
     */
@@ -40,16 +40,16 @@ protected void btnSubmit_Click(object sender, EventArgs e) {
     + "</d1>";
 
     /* [3]
-    With the email <msgBody> built above, the below code conditionally assigns the subject variable
+    With the email <msgBody> built above, the below code (lines 48-86) conditionally assigns the subject variable
     according to the email recipient.
-    For each recipient, the SendEmail method defined in [0] is invoked with specified parameters.
+    For each recipient, the SendEmail method defined in [0] is invoked with specified arguments.
     */
 
     //email Public Assistance Manager
     subject = "Web Contact: Public Assistance Question";
 
     /* [4]
-    In this case, the email being sent is directed to the Public Assistance Manager.
+    In lines 64-66, the email being sent is directed to the Public Assistance Manager.
     Matching up the passed-in arguments to the defined parameters, though:
 
     emailFrom = ConfigurationManager.AppSettings["emailNoReply"] (i.e. a noreply address)
@@ -69,7 +69,7 @@ protected void btnSubmit_Click(object sender, EventArgs e) {
     subject = "Buncombe County: Public Assistance Question";
 
     /* [5]
-    In this case, the email is sent to the user submitting the form.
+    In lines 84-86, the email is sent to the user submitting the form.
     Matching up the passed-in arguments to the defined parameters:
 
     emailFrom = ConfigurationManager.AppSettings["emailNoReply"]
