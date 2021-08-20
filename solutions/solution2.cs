@@ -1,6 +1,13 @@
-/* solution 2:
-initialising constant variable to store the hardcoded email address (line 23)
-then passing in the reference to the variable into function invocation (line 40)
+/* Solution 2:
+Initialising constant variable to store the hardcoded email address (line 30)
+then passing in the reference to the variable into function invocation (line 47)
+
+Advantage:
+Containing the email address in modular context,
+A relative quick "hack" but more a maintainable approach than solution 1.
+Disadvantage:
+When the email address needs to be updated, the person responsible will have to direct themselves
+to this method within the codebase and still update the value manually.
 */
 
 /*

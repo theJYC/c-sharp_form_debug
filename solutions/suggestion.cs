@@ -1,7 +1,20 @@
-/* suggestion
-modify emailNoReply in AppSettings.json with another designated email address
-(e.g. pamanager@buncombecounty.org)
-and concatenate in msgBody that users can explicitly reply to this email address for further inquiries (line 37)
+/* Bonus Suggestion:
+With solution 4 implemented (i.e. emailPAM stored into AppSettings.json),
+remove the noreply email.
+
+noreply emails are bad practice for a couple of reasons:
+1) they make it harder for the end-user to follow-up with the webmaster,
+since they are not otherwise given a direct channel to submit their concerns to.
+i.e. this can hinder the UX and accessibility of website to its target demographic.
+
+2) noreply emails are sometimes filtered by email providers and flagged as spammail.
+i.e. this system-generated email may not therefore even reach the desired users.
+
+With that said,
+my suggestion is to replace the noreply email with a designated Point of Contact (e.g. pamanager@buncombecounty.org).
+modifying the emailFrom argument in function invocation on line 60.
+Then, concatenate in msgBody an additional text
+indicating that users can explicitly reply to this email address for further inquiries (line 50)
 */
 
 /*
@@ -38,13 +51,13 @@ protected void btnSubmit_Click(object sender, EventArgs e)
 
     //email Public Assistance Manager
     subject = "Web Contact: Public Assistance Question";
-    SendEmail(ConfigurationManager.AppSettings["emailNoReply"], subject,
+    SendEmail(ConfigurationManager.AppSettings["emailNoReply"], ConfigurationManager.AppSettings["emailPAM"], subject,
     "<p><strong>There are new comments from a https://www.buncombecounty.org/publicassistanceuser.</strong></p>"
     + msgBody);
 
     //email the user
     subject = "Buncombe County: Public Assistance Question";
-    SendEmail(ConfigurationManager.AppSettings["emailNoReply"], txtEmail.Text, subject,
+    SendEmail(ConfigurationManager.AppSettings["emailPAM"], ConfigurationManager.AppSettings["emailPAM"], subject,
     "<p>Your question/comment has been received and we will reply as soon as possible.</p>"
     + msgBody);
 }

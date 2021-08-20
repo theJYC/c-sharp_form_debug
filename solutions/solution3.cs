@@ -1,6 +1,15 @@
-/* solution 3:
-specifying an optional parameter in function definition, with default value of new email address (line 10)
-hence also reordering the arguments of function invocation (lines 45 - 47) to prevent compile-time error
+/* Solution 3:
+Specifying an optional parameter in function definition,
+passing in as its default value the new email address (line 19)
+
+Advantage:
+More friendly towards human-error if the developer forgets to pass in the email address in function invocation.
+Disadvantage:
+Optional parameters have to be passed in as the last parameter upon function definion.
+This means that the ordering of the arguments passed into each function invocation will have to reflect
+the newly ordered parameters in the definition.
+For example, the arguments in the function invocation at lines 54-56 had to be rearranged correspondingly;
+otherwise, the script will have thrown a compile-time error
 */
 
 /*

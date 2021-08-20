@@ -1,7 +1,20 @@
-/* solution 4 (optimal)
-configuring the AppSettings.json file in the build file to add a new key-value pair,
-"emailPAM" : "pamanager@buncombecounty.org",
-and referencing it witin function invocation. (line 40)
+/* Solution 4 (optimal):
+Modifying the AppSettings.json file in the build directory
+to include the following key-value pair:
+{
+    "emailPAM" : "pamanager@buncombecounty.org"
+}.
+Then, referencing it as ConfigurationManager.AppSettings["emailPAM"] witin function invocation (line 53).
+
+Advantage:
+Storing the email addresss in relatively the most intuitive place in the codebase (since noreply is also stored there)
+Additionally, the email address can be kept private from users since it will be stored on the server.
+Lastly, if the Web Admin needs to update the email address, they will not have to rummage through codebase
+and instead simply make the modification on the AppSettings.json file.
+
+Disadvantage:
+It might not be ideal to add a bunch of new environment variables if there is a system in place,
+which has been designed to only keep certain variables in AppSettings.json.
 */
 
 /*

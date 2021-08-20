@@ -1,5 +1,11 @@
-/* solution 1:
-passing in hardcoded email address as an argument within function invocation (line 38)
+/* Solution 1:
+Passing in hardcoded email address as the second argument passed into function invocation (line 44)
+
+Advantage:
+Quick and easy "hack"
+Disadvantage:
+Hardcoding an email address is generally bad practice, since the email is subject to modification,
+and, when it does need to be modified, will have to be manually changed in each place of the codebase where it is referenced.
 */
 
 /*
