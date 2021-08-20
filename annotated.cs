@@ -42,7 +42,7 @@ protected void btnSubmit_Click(object sender, EventArgs e) {
     /* [3]
     With the email <msgBody> built above, the below code (lines 48-86) conditionally assigns the subject variable
     according to the email recipient.
-    For each recipient, the SendEmail method defined in [0] is invoked with specified arguments.
+    For each recipient, the SendEmail method (defined earlier in line 7) is invoked with specified arguments.
     */
 
     //email Public Assistance Manager
@@ -58,7 +58,7 @@ protected void btnSubmit_Click(object sender, EventArgs e) {
     msgBody = (built in [2])
 
     It becomes evident that the argument that corresponds to the emailTo parameter is missing.
-    This is the site of the problem; the function, as it is currently written, will not run successfully.
+    THIS IS THE SITE OF THE PROBLEM; the function, as it is currently written, will not run successfully.
     */
 
     SendEmail(ConfigurationManager.AppSettings["emailNoReply"], subject,
