@@ -27,7 +27,7 @@ root
 - `original.cs`: The original code snippet that has been provided as the problematic code.
 - `annotated.cs`: Line-by-line analysis of `original.cs`, illustrated by multi-line comments to demonstrate the problem-solving process.
     - N.B. Skip to `/*[4]*/` for problem identification.
-- `solutions`: directory that holds the four possible solutions to fix the problem. At the top of each file is a brief summary of the solution, with its advantage and disadvantages outlined. 
-    - N.B. `solution4.cs` is my optimal solution.
+- `solutions`: Directory that holds the four possible solutions to fix the problem. At the top of each file is a brief summary of the solution, with its advantage and disadvantages outlined. 
+    - N.B. `solution4.cs` is my optimal solution, and each solution build on the previous one.
 - `suggestion.cs`: A bonus piece to illustrate a potential area of improvement in the code, in order to improve UX. 
 - `/root/README.md`: Documentation that holds the directory map and the detailed index of the children files and subdirectory.
