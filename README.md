@@ -14,7 +14,6 @@ root
 │   annotated.cs    
 │
 └───solutions
-│   │   README.md
 │   │   solution1.cs
 │   │   solution2.cs
 │   │   solution3.cs
