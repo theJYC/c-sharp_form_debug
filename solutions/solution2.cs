@@ -27,7 +27,7 @@ protected void btnSubmit_Click(object sender, EventArgs e)
 {
     string msgBody = string.Empty;
     string subject = string.Empty;
-    string PUBLIC_ASSISTANT_MANAGER_EMAIL = "pamanager@buncombecounty.org"
+    string PUBLIC_ASSISTANT_MANAGER_EMAIL = "pamanager@buncombecounty.org";
 
     //build the email
     msgBody = "<h1>Contact Public Assistance</h1><p>This email was received from a user of the Buncombe County Website.</p>"
